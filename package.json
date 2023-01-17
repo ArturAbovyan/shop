@@ -1,0 +1,32 @@
+{
+  "name": "back_for_shop",
+  "version": "1.0.0",
+  "description": "Mern project for shop",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js",
+    "client": "npm run start --prefix client_for_shop",
+    "dev": "concurrently \" npm run server \" \" npm run client \""
+  },
+  "keywords": [
+    "mern",
+    "react",
+    "shop"
+  ],
+  "author": "Spesna",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^3.11.1",
+    "apollo-server-errors": "^3.3.1",
+    "bcrypt": "^5.1.0",
+    "config": "^3.3.8",
+    "graphql": "^16.6.0",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^6.8.3"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "nodemon": "^2.0.20"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "port" : 5000,
+  "jwtSecret": "spesna shop app 6776",
+  "mongoUri": "mongodb+srv://Artur:Art247678@cluster0.q6aedo6.mongodb.net/?retryWrites=true&w=majority"
+}

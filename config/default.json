@@ -1,5 +1,12 @@
 {
   "port" : 5000,
   "jwtSecret": "spesna shop app 6776",
-  "mongoUri": "mongodb+srv://Artur:Art247678@cluster0.q6aedo6.mongodb.net/?retryWrites=true&w=majority"
+  "mongoUri": "mongodb+srv://Artur:Art247678@cluster0.q6aedo6.mongodb.net/?retryWrites=true&w=majority",
+  "BASE_URL" : "http://localhost:3000/",
+  "HOST" : "smtp.gmail.com",
+  "SERVICE" : "gmail",
+  "EMAIL_PORT" : 465,
+  "SECURE" : true,
+  "USER" : "spesnaweb@gmail.com",
+  "PASS" : "vxakckgnpyghunym"
 }

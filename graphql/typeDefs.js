@@ -5,14 +5,20 @@ module.exports = gql`
         email: String
         password: String
         token: String
+        userId: String
     }
     
-    input RegisterInput{
+    input VerifyEmail{
+        userId: String
+        token: String
+    }
+    
+    input LoginInput{
         email: String
         password: String
     }
     
-    input LoginInput{
+    input RegisterInput{
         email: String
         password: String
     }
@@ -24,5 +30,6 @@ module.exports = gql`
     type Mutation {
         registerUser(registerInput: RegisterInput): User
         loginUser(loginInput: LoginInput): User
+        verifyUser(verifyEmail: VerifyEmail): User
     }
 `

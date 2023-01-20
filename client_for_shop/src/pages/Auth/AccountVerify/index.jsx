@@ -3,6 +3,7 @@ import {gql} from "graphql-tag";
 import {useMutation} from "@apollo/react-hooks";
 import {useParams} from "react-router";
 import {useNavigate} from "react-router-dom";
+import VerifySection from "../../../../component/organism/Auth/Verify/sections/Verify";
 
 
 const VERIFY_USER = gql`
@@ -47,7 +48,7 @@ const AccountVerify = () => {
     })
     return(
         <div>
-            <AccountVerify/>
+            <VerifySection/>
         </div>
 
     )

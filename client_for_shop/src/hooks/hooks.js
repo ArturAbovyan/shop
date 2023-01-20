@@ -4,7 +4,7 @@ export const useForm = (callback, initialState = {}) => {
     const [values, setValues] = useState(
         {
             email : "",
-            password : ""
+            password : "",
         }
     )
     const changeHandler = event => {

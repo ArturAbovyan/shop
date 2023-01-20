@@ -1,0 +1,28 @@
+.sidebar{
+  width: 15vw;
+  padding: 5vh 0 5vh 1vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.sidebar div{
+  margin-top: 1vh;
+}
+
+.sidebarItem {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+}
+.sidebarItem:hover{
+  color: #6c1182;
+  text-decoration: underline;
+  transition-duration: 500ms;
+}
+
+.ordersDiv{
+  border: 1px solid grey;
+}

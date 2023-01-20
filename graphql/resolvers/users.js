@@ -11,7 +11,7 @@ const config = require("config")
 
 module.exports = {
     Mutation: {
-        async registerUser(_, { registerInput: {email, password} }){
+        async registerUser(_, { registerInput: {email, password, firstName, lastName} }){
             //see if an old user exists
             const oldUser = await User.findOne({email});
 
@@ -29,7 +29,9 @@ module.exports = {
             //build out mongoose model
             const newUser = new User({
                 email: email.toLowerCase(),
-                password: encryptedPassword
+                password: encryptedPassword,
+                firstName: firstName,
+                lastName: lastName
             })
 
             //create out JWT ( attatch to our User )
@@ -90,7 +92,7 @@ module.exports = {
             }
             // if user doesn't exist, return error
             else {
-                throw new ApolloError("User Doesn't Exists", "USER_DOESNT_EXISTS");
+                throw new ApolloError("The User email or password provided is incorrect", "USER_DATA_WRONG");
             }
         },
 

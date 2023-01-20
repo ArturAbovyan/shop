@@ -26,6 +26,7 @@ const Navbar = () => {
                 </IconButton>
                 <IconButton  aria-label="log out" component="label" onClick={()=> { navigate("/login") }} sx = {{color: "white"}}>
                     <LoginIcon/>
+                    <span className="logout">Log In</span>
                 </IconButton>
             </div>
         </div>

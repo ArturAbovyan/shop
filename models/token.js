@@ -18,4 +18,4 @@ const tokenSchema = new Schema({
     }
 })
 
-module.exports = model("token", tokenSchema);
+module.exports = model("token", tokenSchema, 'UserVerifyToken');

@@ -10,6 +10,8 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import MenuIcon from '@mui/icons-material/Menu';
 import {PersonAdd, Settings} from "@mui/icons-material";
+import LocalPostOfficeIcon from '@mui/icons-material/LocalPostOffice';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
 const NavBar = () => {
     const context = useContext(AuthContext);
@@ -45,6 +47,12 @@ const NavBar = () => {
             <div className="navButton">
                 <IconButton  aria-label="home" component="label" onClick={()=> { navigate("/") }} sx = {{color: "white"}}>
                     <ShoppingCartIcon />
+                </IconButton>
+                <IconButton  aria-label="messages" component="label" onClick={()=> { navigate("/") }} sx = {{color: "white"}}>
+                    <LocalPostOfficeIcon />
+                </IconButton>
+                <IconButton  aria-label="favorite" component="label" onClick={()=> { navigate("/") }} sx = {{color: "white"}}>
+                    <FavoriteIcon />
                 </IconButton>
                 <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center', paddingLeft:"0" , width:"4vw"}}>
                     <Tooltip title="Account settings">
@@ -117,6 +125,7 @@ const NavBar = () => {
                 </Menu>
                 <IconButton  aria-label="log out" component="label" onClick={handleLogout} sx = {{color: "white"}}>
                     <LogoutIcon />
+                    <span className="logout">Log Out</span>
                 </IconButton>
             </div>
         </div>

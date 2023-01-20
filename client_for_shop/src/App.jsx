@@ -3,6 +3,7 @@ import {useRoutes} from "./routes";
 import {AuthContext} from "./context/authContext";
 import {useContext} from "react";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import {ToastContainer} from "react-toastify";
 
 function App() {
   const context = useContext(AuthContext);
@@ -22,6 +23,7 @@ function App() {
       >
           <div>
               {routes}
+              <ToastContainer />
           </div>
       </ThemeProvider>
   );

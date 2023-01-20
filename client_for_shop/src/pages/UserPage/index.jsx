@@ -1,9 +1,12 @@
 import {useNavigate} from "react-router-dom";
+import {HeroSection} from "../../component/organism/UserPage";
 
 const UserPage = () => {
     const navigate = useNavigate()
     return(
-        <h1>user page</h1>
+        <div>
+            <HeroSection/>
+        </div>
 
     )
 }

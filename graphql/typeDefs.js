@@ -4,6 +4,8 @@ module.exports = gql`
     type User {
         email: String
         password: String
+        firstName: String
+        lastName: String
         token: String
         userId: String
     }
@@ -21,6 +23,8 @@ module.exports = gql`
     input RegisterInput{
         email: String
         password: String
+        firstName: String
+        lastName: String
     }
     
     type Query {

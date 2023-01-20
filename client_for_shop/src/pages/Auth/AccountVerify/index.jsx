@@ -3,7 +3,8 @@ import {gql} from "graphql-tag";
 import {useMutation} from "@apollo/react-hooks";
 import {useParams} from "react-router";
 import {useNavigate} from "react-router-dom";
-import VerifySection from "../../../../component/organism/Auth/Verify/sections/Verify";
+import VerifySection from "../../../component/organism/Auth/Verify/sections/Verify";
+import {toast} from "react-toastify";
 
 
 const VERIFY_USER = gql`
@@ -39,7 +40,8 @@ const AccountVerify = () => {
     },[])
     const [verifyUser, {loading}] = useMutation(VERIFY_USER, {
         update(proxy, { data: { verifyUser: userData }}) {
-            navigate("/");
+
+            // navigate("/");
         },
         onError({graphQLErrors}){
             setErrors(graphQLErrors);

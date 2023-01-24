@@ -4,9 +4,13 @@ import logo from "../../../assets/logo.png";
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import LoginIcon from '@mui/icons-material/Login';
 import {useNavigate} from "react-router-dom";
+import {Popup} from "../../../component/organism/Auth";
+import {useState} from "react";
+
 
 const Navbar = () => {
     const navigate = useNavigate()
+    const [open, setOpen] = useState(false);
     return(
         <div className="navbar">
             <IconButton  aria-label="home" component="label" onClick={()=> { navigate("/") }} sx = {{color: "white", border: "1px solid white", borderRadius: "5px", padding:"0"}}>
@@ -24,11 +28,12 @@ const Navbar = () => {
                 <IconButton  aria-label="home" component="label" onClick={()=> { navigate("/") }} sx = {{color: "white"}}>
                     <ShoppingCartIcon />
                 </IconButton>
-                <IconButton  aria-label="log out" component="label" onClick={()=> { navigate("/login") }} sx = {{color: "white"}}>
+                <IconButton  aria-label="log In" component="label" onClick={() => setOpen(true)} sx = {{color: "white"}}>
                     <LoginIcon/>
                     <span className="logout">Log In</span>
                 </IconButton>
             </div>
+            {open ? <Popup closePopup={() => setOpen(false)} /> : null}
         </div>
     )
 }

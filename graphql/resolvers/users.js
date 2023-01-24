@@ -52,8 +52,8 @@ module.exports = {
                 token: crypto.randomBytes(32).toString("hex")
             }).save();
 
-            const url = `${config.get("BASE_URL")}emailVerify/users/${res._id}/verify/${newToken.token}`;
-            await  sendEmail(res.email, url)
+            const verifyCode = Math.floor(100000 + Math.random() * 900000);
+            await  sendEmail(res.email, verifyCode)
             return {
                 id: res.id,
                 ...res._doc,

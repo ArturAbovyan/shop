@@ -5,9 +5,12 @@ import {useContext} from "react";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import {ToastContainer} from "react-toastify";
 
+
 function App() {
   const context = useContext(AuthContext);
   const routes = useRoutes(context.user);
+
+
   return (
       <ThemeProvider
           theme={createTheme({

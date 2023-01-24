@@ -34,7 +34,12 @@ const sendEmail = (email, text) => {
               From Shop Web Page
             </h1>
             <div style="font-size: .8rem; margin: 0 30px">
-              <p>Message: <br/> <i style="margin-left: 30px">${text}</i></p>
+              <p>Message: <br/> <span style="
+              margin-left: 30px;
+              color: #2f2e2e;
+              font-weight:bold ;
+              font-size: 20px;
+              ">${text}</span></p>
             </div>
           </div>
         </div>
